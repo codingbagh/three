@@ -1,5 +1,5 @@
 import { Scene } from "three"
-import {CapsuleGeometry } from "three"
+import {SphereGeometry } from "three"
 import { MeshBasicMaterial } from "three"
 import { Mesh } from "three"
 import { PerspectiveCamera } from "three"
@@ -21,8 +21,8 @@ const renderer = new WebGLRenderer()
 renderer.setSize(window.innerWidth,window.innerHeight)
 document.body.appendChild(renderer.domElement)
 
-const geometry = new CapsuleGeometry(1,1,4,8)
-const material =new MeshBasicMaterial({color:"#049ef4",opacity:1,visible:1})
+const geometry = new SphereGeometry(2)
+const material =new MeshBasicMaterial({color:"orangered",opacity:1,visible:1})
 const cube = new Mesh(geometry, material)
 scene.add(cube)
 camera.position.z = 5
